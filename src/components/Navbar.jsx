@@ -15,7 +15,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="sticky top-0 z-50 backdrop-blur-3xl bg-slate-800">
+    <div className="sticky top-0 z-50 backdrop-blur-3xl bg-slate-800 ">
       <div className="navbar container mx-auto py-4">
         <div className="navbar-start">
           <div className="dropdown">
@@ -42,7 +42,9 @@ const Navbar = () => {
               {navbarLinks}
             </ul>
           </div>
-          <a className="text-2xl">Coffee Book</a>
+          <NavLink to="/" className=" text-xl">
+            Coffe Book
+          </NavLink>
         </div>
         <div className="navbar-end hidden lg:flex ">
           <ul className="menu menu-horizontal px-1 flex gap-4">
