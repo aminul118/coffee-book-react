@@ -1,8 +1,11 @@
 import Heading from "../components/Heading";
 import HeroBanner from "../components/HeroBanner";
-import TabNav from "../components/TabNav";
+import Categories from "../components/Categories";
+import { Outlet, useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const categories = useLoaderData()
+  console.log(categories);
   return (
     <div>
       <HeroBanner></HeroBanner>
@@ -12,7 +15,10 @@ const Home = () => {
           "hoose your desired coffee category to browse through specific coffees that fit in your taste."
         }
       ></Heading>
-      <TabNav></TabNav>
+      {/* Categories Section */}
+      <Categories categories={categories}></Categories>
+      {/* Dynamic Nasted Components */}
+      <Outlet></Outlet>
     </div>
   );
 };
