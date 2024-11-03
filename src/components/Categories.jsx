@@ -5,11 +5,12 @@ const Categories = ({ categories }) => {
     <div role="tablist" className="tabs tabs-lifted py-8">
       {categories.map((category) => (
         <NavLink
-          to="/category/${category.category}"
+          to={`/category/${category.category}`}
           role="tab"
           className={({ isActive }) =>
             `${isActive ? "tab-active" : ""} tab text-2xl font-thin `
           }
+          key={category.id}
         >
           {category.category}
         </NavLink>

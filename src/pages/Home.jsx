@@ -4,8 +4,7 @@ import Categories from "../components/Categories";
 import { Outlet, useLoaderData } from "react-router-dom";
 
 const Home = () => {
-  const categories = useLoaderData()
-  console.log(categories);
+  const categories = useLoaderData();
   return (
     <div>
       <HeroBanner></HeroBanner>

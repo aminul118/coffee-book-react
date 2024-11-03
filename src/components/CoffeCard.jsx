@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CoffeCard = ({ coffeCard }) => {
-  console.log(coffeCard);
+  // console.log(coffeCard);
   const { id,name, image, category, rating, origin, type, popularity } = coffeCard;
   return (
     <Link to={`/coffe/${id}`}>

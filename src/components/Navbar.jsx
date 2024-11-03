@@ -4,13 +4,28 @@ const Navbar = () => {
   const navbarLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => `${isActive ? "text-orange-400" : "hover:text-orange-400"}`}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/coffees">Coffees</NavLink>
+        <NavLink
+          to="/coffees"
+          className={({ isActive }) => `${isActive ? "text-orange-400" : "hover:text-orange-400"}`}
+        >
+          Coffees
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => `${isActive ? "text-orange-400" : "hover:text-orange-400"}`}
+        >
+          Dashboard
+        </NavLink>
       </li>
     </>
   );
