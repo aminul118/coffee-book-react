@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import nutrition from "../assets/nutrition.png";
+import { addFavorite, getAllFavorites } from "../utility";
 const CoffeDetails = () => {
   const allCoffesdata = useLoaderData();
   const { id } = useParams();
@@ -15,7 +16,9 @@ const CoffeDetails = () => {
 
   const { description, image, name, popularity, rating, making_process } =
     coffee;
-
+  const handleFavourite = (coffe) => {
+    addFavorite(coffe);
+  };
   return (
     <div className="py-8 space-y-4">
       <h1 className="text-3xl font-semibold">{description}</h1>
@@ -27,7 +30,15 @@ const CoffeDetails = () => {
           <p>Rating: {rating}</p>
         </div>
         <div>
-          <button className="btn btn-warning">Add Favorite</button>
+          <button
+           
+            onClick={() => {
+              handleFavourite(coffee);
+            }}
+            className="btn btn-warning"
+          >
+            Add Favorite
+          </button>
         </div>
       </div>
       <div>
